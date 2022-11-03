@@ -1,0 +1,16 @@
+.site-footer {
+    background-color: color(primary-100);
+    color: white;
+    padding: $space-4 0;
+    position: relative;
+    z-index: 1;
+    border-bottom: 8px solid color(secondary);
+    border-radius: $border__radius $border__radius 0 0;
+
+    a {
+        color: white;
+    }
+    
+    
+}
+

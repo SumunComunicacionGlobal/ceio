@@ -1,0 +1,40 @@
+.accordion-block {
+	
+	.accordion-btn {
+		background-color: transparent;
+		cursor: pointer;
+		width: 100%;
+		border: 0 !important;
+		border-radius: 0;
+		align-items: center;
+		justify-content: space-between;
+		transition: 0.4s;
+		padding: $space-05 0 $space-2 0;
+		@include font-size(1.5);
+		color: color(body-main);
+		font-weight: 700;
+
+		&:hover, &.active {
+			color: color(secondary);
+		}
+
+		span {
+			background-color: color(body-main);
+  			-webkit-mask: url(assets/icons/more.svg) no-repeat center;
+  			mask: url(assets/icons/more.svg) no-repeat center;
+			width: $space-2;
+			height: $space-2;
+		}
+	}
+
+	.active span {
+		-webkit-mask: url(assets/icons/less.svg) no-repeat center;
+  		mask: url(assets/icons/less.svg) no-repeat center;
+	}
+	
+	.accordion-content {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+}

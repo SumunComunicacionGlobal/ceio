@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=DM+Serif+Display&display=swap');
+
+/* COPY */
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+    color: color(body-medium);
+    font-family: $font__main;
+    @include font-size(1);
+    line-height: $font__line-height-body;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+}
+
+dfn, cite, em, i {
+    font-style: italic;
+}
+
+blockquote {
+    font-style: italic;
+    font-family: $font__heading;
+    margin: 0;
+}
+
+address {
+    margin: 0 0 1.5em;
+}
+
+pre {
+    background: color(primary-20);
+    font-family: $font__pre;
+    @include font-size(0.9375);
+    line-height: $font__line-height-pre;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
+}
+
+code, kbd, tt, var {
+    font-family: $font__code;
+    @include font-size(0.9375);
+}
+
+abbr, acronym {
+    border-bottom: 1px dotted color(primary-20);
+    cursor: help;
+}
+
+mark, ins {
+    background: color(primary-20);
+    text-decoration: none;
+}
+
+b, strong {
+    font-weight: 700;
+}
+ 
+svg.icon {
+    fill: currentColor;
+}
+
+/**
+ * HEADINGS 
+ */
+
+h1, h2, h3, h4, h5, h6,
+.text-h1, .text-h2, .text-h3, .text-h4, .text-h5 {
+	clear: both;
+	margin-top: 0;
+    line-height: $font__line-height-header;   
+}
+
+
+h1, .text-h1  {
+	font-size: 3.5em;
+    font-family: $font__heading;
+    @include breakpoint(mobile) {
+		font-size: 3em;
+    }
+}
+
+
+h2, .text-h2 {
+    font-size: 2.5em;
+    font-weight: 200;
+    font-family: $font__heading;
+}
+
+h3, .text-h3 {
+	font-size: 2em;
+    font-weight: bold;
+    font-family: $font__heading;
+	@include breakpoint(laptop) {
+		font-size: 1.5em;
+	}
+}
+
+h4, .text-h4 {
+    font-size: 2em;
+    @include breakpoint(laptop) {
+		font-size: 1.75em;
+	}
+}
+
+h5, .text-h5 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+h6, .text-h6 {
+    font-size: 1.25em;
+    font-weight: 700;
+    
+}
+
+.text-caption {
+    text-transform: uppercase;
+    font-weight: bold;
+    @include font-size(1);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

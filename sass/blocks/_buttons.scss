@@ -1,0 +1,50 @@
+// Custom Buttons
+.wp-block-button:not(.is-style-with-icon) .wp-block-button__link{
+    line-height: 1;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 1rem $space-3;
+
+	&:hover {
+		background-color: color(secondary);
+		
+		&::after {
+			padding-left: $space-1;
+			transition: padding-left 0.3s ease;
+		}
+	}
+
+	&:after {
+		content: '→';
+		padding-left: $space-05;
+		transition: padding-left 0.3s ease;
+	}
+	
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	padding: 0.8125rem $space-3;
+	&:hover {
+		color: color(secondary);
+		background-color: transparent;
+	}
+	
+}
+
+.link-ofuscado {
+	font-weight: 700;
+	display: flex;
+
+	&:hover {
+		cursor: pointer;
+		color: color(primary);
+	}
+
+	&::before {
+		content: url('assets/icons/add.svg');
+		display: inline-block;
+		width: $space-2;
+		height: $space-2;
+		margin-right: $space-05;
+	}
+}

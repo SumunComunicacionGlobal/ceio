@@ -1,0 +1,94 @@
+#masthead{
+	display: grid;
+    gap: $grid__gap;
+    grid-template-columns: 124px 1fr auto;
+    justify-content: space-between;
+	padding: $grid__gap;
+
+	@include breakpoint(tablet) {
+		.site-branding {
+			grid-area: logo;
+		}
+	
+		#site-navigation {
+			grid-area: menu;
+		}
+	
+		.wp-block-button {
+			grid-area: menu-cta;
+			justify-self: center;
+		}
+
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"logo menu"
+			"menu-cta menu-cta";
+	}
+	
+}
+
+.mega-is-style-icons-list ul li ul li {
+	display: flex !important;
+	align-items: center; 
+
+	&:before{
+		display: inline-flex !important;
+		content: '';
+		background-image: url("assets/icons/chevron-right.svg");
+		background-size: 24px 24px;
+		background-repeat: no-repeat;
+		color: white;
+		width: $space-2;
+		height: $space-2;
+		margin-right: $space-05;
+	}
+
+	a {
+		transition: padding-left 0.3s ease !important;
+		&:hover {
+			padding-left: $space-05 !important;
+			transition: padding-left 0.3s ease;
+		}
+	}
+}
+
+#mega-menu-wrap-menu-1 #mega-menu-menu-1 li.mega-menu-item-has-children > a.mega-menu-link > span.mega-indicator::after {
+	margin: 0 !important;
+}
+
+#mega-menu-menu-1 {
+	@include breakpoint(tablet) {
+		margin-top: $space-2 !important;
+		li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column > ul.mega-sub-menu > li.mega-menu-item {
+			padding: $space-2 0 $space-2 0 !important;
+		}	
+	}
+}
+
+#mega-menu-wrap-menu-1 #mega-menu-menu-1 > li.mega-menu-megamenu > ul.mega-sub-menu {
+	background-image: url(); 
+}
+
+
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
