@@ -19,7 +19,7 @@
 	</header><!-- .entry-header -->
 	<footer class="card--footer">
 		<?php the_date(); ?>
-		<span>Leer más</span>
+		<span><?php ceio_posted_by();?></span>
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
