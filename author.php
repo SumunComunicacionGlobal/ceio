@@ -22,9 +22,12 @@ get_header();
         </div>
         <div class="author-info">
         <?php       
-            // Get author's website URL
+            // Get author's field
             $user_website = get_the_author_meta('url');
             $user_email = get_the_author_meta('email');
+
+            $author_id = get_the_author_meta('ID');
+            $author_cv = get_field('author_cv', 'user_'. $author_id );
 
             echo '<ul class="horizontal">';
 
@@ -48,14 +51,18 @@ get_header();
 
             the_archive_description( '<div class="archive-description mt-3">', '</div>' );
 
+            if ( ! empty( $author_cv ) ) {
+                
+                // Display author website link
+                echo '<div class="mt-2"><a href="#author-CV" rel="nofollow"><strong>Leer más +</strong></a></div>';
+            };
+
             //if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs();
         ?>
         </div>
     </div>
     
 </header><!-- .entry-header -->
-
-
 
 	<main id="primary" class="site-main container">
 
@@ -85,6 +92,8 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+        
+        echo '<div id="author-CV"' .$author_cv. '</div>';
 		?>
 
 	</main><!-- #main -->
