@@ -10,3 +10,30 @@
 .page:not(.home) .site-main {
     margin-top: $space-8;
 }
+
+.author-title {
+    display: flex;
+
+    .page-title {
+        padding-left: $space-1;
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+
+        .page-title {
+            padding-left: 0;
+        }
+    }
+
+    .avatar {
+        border-radius: 100%;
+    }
+}
+
+.author-info {
+    margin-left: 112px;
+    @include breakpoint(mobile) {
+        margin-left: 0;
+    }
+}

@@ -159,3 +159,25 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/custom-post-type.php';
 
+/**
+ * Author box
+ */
+require get_template_directory() . '/inc/author-box.php';
+
+
+add_filter( 'render_block', 'smn_change_content_list_title_tag', 10, 2 );
+function smn_change_content_list_title_tag( $block_content, $block ) {
+
+    if ( $block['blockName'] === 'core/post-title' ) {
+    
+        $block_content = str_replace( 
+            array( '<h2', '<h3'), 
+            '<p', 
+            $block_content 
+        );
+    
+    }
+
+    return $block_content;
+
+}

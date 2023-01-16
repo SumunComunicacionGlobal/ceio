@@ -144,4 +144,20 @@ ul.is-style-icons-list, .widget_nav_menu {
 .wp-block-social-links.is-style-logos-only .wp-social-link {
 	border: 1px solid;
 	padding: $space-05;
-  }
+}
+
+ul.horizontal {
+	margin: 0;
+	display: flex;
+	li {
+		padding-right: $space-1;
+	}
+
+	a {
+		font-weight: bold;
+		&:hover {
+			color: color(primary-100);
+		}
+	}
+	
+}

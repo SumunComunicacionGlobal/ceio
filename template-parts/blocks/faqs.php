@@ -21,7 +21,7 @@ if( !empty($block['anchor']) ) {
     <div id="<?php echo esc_attr($id); ?>" class="faqs-block mb-6">
         <?php while( have_rows('faqs') ): the_row(); ?>
             <button class="faqs-btn">
-                <?php the_sub_field('faqs_title'); ?>
+                <h3 class="mb-05 text-h6"><?php the_sub_field('faqs_title'); ?></h3>
                 <span><div class="screen-reader-text"><?php esc_html_e( 'Open', 'colegio-aleman' ); ?></div></span>
             </button>
             

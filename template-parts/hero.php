@@ -2,7 +2,10 @@
     
     <div class="entry-header container">
     <?php
-        
+        if (is_author()) {
+            echo get_avatar(get_the_author_meta('ID'));
+        }
+
         if (is_archive()) {
             the_archive_title( '<h1 class="page-title">', '</h1>' );
             the_archive_description( '<div class="archive-description">', '</div>' );
@@ -24,7 +27,7 @@
             echo'</h1>';
         };
 
-        if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs();
+        //if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs();
     ?>
     </div>
 </header><!-- .entry-header -->

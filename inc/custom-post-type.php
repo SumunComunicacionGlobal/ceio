@@ -20,6 +20,7 @@ array('hierarchical' => true,     /* if this is true, it acts like categories */
     'show_ui' => true,
     'show_in_rest' => true,
     'public' => false,
+    'publicly_queryable' => true,
     'query_var' => false,
     'has_archive' => false, /* you can rename the slug here */
     )
