@@ -37,3 +37,22 @@
         margin-left: 0;
     }
 }
+
+.author_bio_section {
+    & > div {
+        background-color: color(secondary-20);
+        padding: $space-3;
+    }
+
+    .author_name {
+        padding-left: $space-1;
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+
+        .author_name {
+            padding-left: 0;
+        }
+    }
+}

@@ -25,14 +25,14 @@ function ceio_author_info_box( $content ) {
     
   if ( ! empty( $display_name ) )
     
-  $author_details = '<p class="author_name">About ' . $display_name . '</p>';
+  $author_details = '<div class="author-title middle-xs mb-2">'. get_avatar( get_the_author_meta('user_email') , 90 ) .' <p class="author_name text-h3">Sobre ' . $display_name . '</p></div>';
     
   if ( ! empty( $user_description ) )
   // Author avatar and bio
     
-  $author_details .= '<p class="author_details">' . get_avatar( get_the_author_meta('user_email') , 90 ) . nl2br( $user_description ). '</p>';
+  $author_details .= '<p class="author_details">' . nl2br( $user_description ). '</p>';
     
-  $author_details .= '<p class="author_links"><a href="'. $user_posts .'">View all posts by ' . $display_name . '</a>'; 
+  $author_details .= '<p class="author_links"><a href="'. $user_posts .'">Ver todos los post de ' . $display_name . '</a>'; 
     
   // Check if author has a website in their profile
   if ( ! empty( $user_website ) ) {
@@ -46,7 +46,7 @@ function ceio_author_info_box( $content ) {
   }
     
   // Pass all this info to post content
-  $content = $content . '<footer class="author_bio_section" >' . $author_details . '</footer>';
+  $content = $content . '<footer class="author_bio_section" ><div>' . $author_details . '</div></footer>';
   }
   return $content;
   }

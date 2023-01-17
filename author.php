@@ -93,7 +93,7 @@ get_header();
 
 		endif;
         
-        echo '<div id="author-CV"' .$author_cv. '</div>';
+        echo '<div class="mt-2 mb-4" id="author-CV"' .$author_cv. '</div>';
 		?>
 
 	</main><!-- #main -->
