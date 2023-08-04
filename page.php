@@ -15,9 +15,11 @@
 get_header();
 ?>
 
-	<?php if ( !is_front_page() && is_page() ) : ?>
-		<?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
-	<?php endif; ?>
+	<?php if ( !is_front_page() && is_page() ) :
+		if ( !get_post_meta( get_the_ID(), 'hide_hero', true ) ) :
+			get_template_part( 'template-parts/hero', get_post_type() );
+		endif;
+	endif; ?>
 
 	<main id="primary" class="site-main">
 
